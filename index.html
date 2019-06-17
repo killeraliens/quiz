@@ -10,24 +10,24 @@
   <link rel="stylesheet" href="./style.css" type="text/css">
 </head>
 <body>
-  <header role='banner' class="">
+  <!-- <header role='banner' class="hidden" id="banner">
     <div class="banner">
       <h1 id="logo">Cryptids<br>Quiz</h1>
       <div class="count-score">
-        <p>Question: <span id="count">x</span>/10</p>
-        <p>Score: <span id="score">0</span></p>
+        <p>Question: <span id="questionNum">x</span>/10</p>
+        <p>Score: <span id="scoreCount">0</span></p>
       </div>
     </div>
-  </header>
+  </header> -->
   <main role='main'>
-    <section id="jsStartQuiz" class="intro-results-container hidden">
+    <section id="jsStartQuiz" class="intro-results-container">
       <h1>Cryptids Quiz</h1>
       <p>How well do you know your folklore creatures?</p>
       <div class='button-wrap'>
         <button type='button' id='jsStartButton'>Get Started!</button>
       </div>
     </section>
-    <section id="jsQuestionAnswerForm" class="container">
+    <!-- <section id="jsQuestionAnswerForm" class="container">
       <form >
         <p id="question">
           Touching any part of me will cause almost instant death and tremendous pain.
@@ -82,7 +82,10 @@
       <div class='button-wrap'>
         <button type='button' id='jsRestartButton'>Take it again!</button>
       </div>
-    </section>
+    </section> -->
   </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
 </body>
 </html>
