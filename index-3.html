@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cryptids Quiz</title>
+  <meta name='description' content='Test your knowledge on folklore creatures.'>
+  <link href="https://fonts.googleapis.com/css?family=Patua+One|Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" type="text/css">
+</head>
+
+<body>
+  <header role='banner' id="banner">
+    <div class="banner">
+      <h1 id="logo">Cryptids<br>Quiz</h1>
+      <div class="count-score">
+        <p>Question: <span id="questionNum">1</span>/10</p>
+        <p>Score: <span id="scoreCount">0</span></p>
+      </div>
+    </div>
+  </header>
+  <main role='main'>
+    <section id="jsIncorrectFeedback" class="container">
+      <div class="feedback">
+        <h1>Nope, but nice try!</h1>
+        <p>The correct answer is <br>correct.name</p>
+        <img class="image"
+          src="https://www.legendsofamerica.com/wp-content/uploads/2017/10/Wendigo1.jpg"
+          alt="correct.name"></img>
+      </div>
+      <a href="./index-4.html">
+        <button id="jsNextButton" type="button">Next Question</button>
+      </a>
+    </section>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

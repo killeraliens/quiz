@@ -22,6 +22,7 @@ main {
 
 h1 {
   font-family: 'Patua One', serif;
+  margin-bottom: 10px;
 }
 
 button {
@@ -32,6 +33,10 @@ button {
   background: none;
   color: white;
   border: 1px solid white;
+}
+
+a {
+  text-decoration: none;
 }
 
 button:hover {
@@ -60,7 +65,7 @@ button:focus {
 }
 
 p {
-  margin: 10px 0px;
+  margin-bottom: 10px;
 }
 
 fieldset {
