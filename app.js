@@ -90,10 +90,9 @@ function renderQuestionAnswerSection() {
 function handleSubmitButton() {
   $('main').on('click', '#jsSubmitButton', function(e) {
     e.preventDefault();
-    const userSelection = $('input:checked').val();
-    // const currentQuestion = $('#question').text();
+    const selectedName = $('input:checked').val();
     const answerName = questions[questionNum - 1].correct.name;
-    checkAnswerRenderResults(userSelection, answerName);
+    checkAnswerRenderResults(selectedName, answerName);
   });
 }
 
@@ -151,10 +150,10 @@ function handleNextButton() {
 }
 
 function renderFinalResultsPage() {
-  $('main').html(returnResults());
+  $('main').html(renderResults());
 }
 
-function returnResults() {
+function renderResults() {
   return `
     <section id="jsResultsPage" class="intro-results-container">
       <h1>Final Score: ${score}</h1>
@@ -175,11 +174,17 @@ function determineStatus() {
   return `neophyte`;
 }
 
+function handleRestartButton() {
+  $('main').on('click', '#jsRestartButton', function (e) {
+    location.reload();
+  });
+}
 
 function handleButtons() {
   handleStartButton();
   handleSubmitButton();
   handleNextButton();
+  handleRestartButton();
 }
 
 handleButtons();
