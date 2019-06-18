@@ -28,24 +28,24 @@ const questions = [
   }
 ];
 
+let score = 0;
+let questionNum = 1;
 
 function handleStartButton() {
-  // const startSection = $('#jsStartQuiz');
   $('main').on('click', '#jsStartButton', function(e) {
     $('#jsStartQuiz').remove();
-    $(this).html(renderQuiz(1, 0));
-
+    renderQuizPage(renderQuestionAnswerSection());
   })
 }
 
-function renderQuiz(questionNum, score) {
+function renderQuizPage(section) {
   // render banner header
   // render jsQuestionAnswerForm section
   //join html parts
-  $('main').html(renderBanner(questionNum, score) + '\n' + renderQuestionAnswerSection(questionNum));
+  $('main').html(renderBannerHeader() + '\n' + section);
 }
 
-function renderBanner(questionNum, score) {
+function renderBannerHeader() {
   return `
     <div class="banner">
       <h1 id="logo">Cryptids<br>Quiz</h1>
@@ -57,14 +57,12 @@ function renderBanner(questionNum, score) {
   `;
 }
 
-function renderQuestionAnswerSection(questionNum) {
+function renderQuestionAnswerSection() {
   const questionObject = questions[questionNum - 1];
   return `
     <section id="jsQuestionAnswerForm" class="container">
       <form >
-        <p id="question">
-          ${questionObject.question}
-        </p>
+        <p id="question">${questionObject.question}</p>
         <fieldset>
           <label>
             <input type="radio" id="radio1" name="option" value="${questionObject.options.a}" required>
@@ -92,13 +90,96 @@ function renderQuestionAnswerSection(questionNum) {
 function handleSubmitButton() {
   $('main').on('click', '#jsSubmitButton', function(e) {
     e.preventDefault();
-    console.log($('input:checked').val());
+    const userSelection = $('input:checked').val();
+    // const currentQuestion = $('#question').text();
+    const answerName = questions[questionNum - 1].correct.name;
+    checkAnswerRenderResults(userSelection, answerName);
   });
 }
+
+function checkAnswerRenderResults(selection, answer) {
+  if (answer === selection) {
+    score++;
+    renderQuizPage(renderCorrectSection());
+  } else {
+    renderQuizPage(renderWrongSection());
+  }
+}
+
+function renderCorrectSection() {
+  const questionObject = questions[questionNum - 1];
+  return `
+    <section id="jsCorrectFeedback" class="container">
+      <div class="feedback">
+        <h1>You got it right!</h1>
+        <img class="image" src="${questionObject.correct.imgUrl}"
+          alt="${questionObject.correct.name}">
+        </img>
+        <p>${questionObject.correct.name} says: <br>${questionObject.correct.says}</p>
+      </div>
+      <button id="jsNextButton" type="button">Next Question</button>
+    </section>
+  `;
+}
+
+function renderWrongSection() {
+  const questionObject = questions[questionNum - 1];
+  return `
+    <section id="jsIncorrectFeedback" class="container">
+      <div class="feedback">
+        <h1>Nope, but nice try!</h1>
+        <p>The correct answer is <br>${questionObject.correct.name}</p>
+        <img class="image"
+          src="${questionObject.correct.imgUrl}"
+          alt="${questionObject.correct.name}"></img>
+      </div>
+      <button id="jsNextButton" type="button">Next Question</button>
+    </section>
+  `;
+}
+
+function handleNextButton() {
+  $('main').on('click', '#jsNextButton', function(e) {
+    e.preventDefault();
+    if (questionNum < questions.length) {
+      questionNum++;
+      renderQuizPage(renderQuestionAnswerSection());
+    } else {
+      renderFinalResultsPage();
+    }
+  });
+}
+
+function renderFinalResultsPage() {
+  $('main').html(returnResults());
+}
+
+function returnResults() {
+  return `
+    <section id="jsResultsPage" class="intro-results-container">
+      <h1>Final Score: ${score}</h1>
+      <p>Cryptozoologist Status:<br>${determineStatus()}</p>
+      <div class='button-wrap'>
+        <button type='button' id='jsRestartButton'>Take it again!</button>
+      </div>
+    </section>
+  `;
+}
+
+function determineStatus() {
+  if (score >= questions.length * .6) {
+    return `master`;
+  } else if (score >= questions.length * .3 ) {
+    return `apprentice`;
+  }
+  return `neophyte`;
+}
+
 
 function handleButtons() {
   handleStartButton();
   handleSubmitButton();
+  handleNextButton();
 }
 
 handleButtons();
