@@ -31,6 +31,7 @@ h1 {
 }
 
 button {
+  margin-top: 10px;
   padding: 0px 20px;
   line-height: 36px;
   font-size: 14px;
@@ -73,7 +74,7 @@ label span:hover {
 .container {
   background-color: rgba(255, 255, 255, .3);
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   max-width: 500px;
   margin: 0px auto;
   margin-top: 40px;
@@ -81,6 +82,7 @@ label span:hover {
 
 p {
   margin-bottom: 10px;
+  /* font-family: 'Patua One', serif; */
 }
 
 fieldset {
@@ -134,7 +136,7 @@ input {
   padding: 2px;
 }
 
-#baseGradient, #layerGradient {
+#baseGradient, #layerGradient1, #layerGradient2 {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -179,6 +181,15 @@ input {
 
 .murky-red-bg {
   background: linear-gradient(270deg, #521b49, #8d1031, #8a176a, #b03301);
+  background-size: 800% 800%;
+
+  -webkit-animation: murkyMovement 30s ease infinite;
+  -moz-animation: murkyMovement 30s ease infinite;
+  animation: murkyMovement 30s ease infinite;
+}
+
+.murky-green-bg {
+  background: linear-gradient(270deg, #13604c, #449857, #04723f, #009d22);
   background-size: 800% 800%;
 
   -webkit-animation: murkyMovement 30s ease infinite;

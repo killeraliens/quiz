@@ -9,7 +9,30 @@ function renderFinalResultsPage() {
 function renderBackground() {
   // $('#baseGradient').removeClass('blue-base').addClass('no-opacity');
   // $('body').removeClass('murky-blue-bg').addClass('murky-red-bg');
-  $('#layerGradient').removeClass('no-opacity').addClass('murky-red-bg');
+  // console.log(questions[questionNum -1].correct.environment);
+  const currEnvironment = questions[questionNum - 1].correct.environment;
+  const currBgColorClass = determineBgColor(currEnvironment);
+  console.log(currBgColorClass);
+  $('#layerGradient1').removeClass('no-opacity').addClass(currBgColorClass);
+}
+
+function renderBackground2() {
+  const currEnvironment = questions[questionNum - 1].correct.environment;
+  const currBgColorClass = determineBgColor(currEnvironment);
+  console.log(currBgColorClass);
+  $('#layerGradient1').removeClass(currBgColorClass).addClass('no-opacity');
+  $('#layerGradient2').removeClass('no-opacity').addClass(currBgColorClass);
+}
+
+function determineBgColor(environment) {
+  if (environment === 'Mars') {
+    return `murky-red-bg`;
+  } else if (environment === 'Night') {
+    return `no-opacity`;
+  } else if (environment === 'Airborn') {
+    return `murky-green-bg`;
+  }
+  return `no-opacity`;
 }
 
 function renderBannerHeader() {
@@ -29,7 +52,7 @@ function renderQuestionAnswerSection() {
   return `
     <section id="jsQuestionAnswerForm" class="container">
       <form >
-        <p id="question">${questionObject.question}</p>
+        <p id="question">${questionObject.question}<br>What am I?</p>
         <fieldset>
           <label>
             <input type="radio" id="radio1" name="option" value="${questionObject.options.a}" required>
