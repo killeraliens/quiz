@@ -1,9 +1,18 @@
 let score = 0;
 let questionNum = 1;
 
+function incrementScore() {
+  score++;
+}
+
+function incrementQuestionNum() {
+  questionNum++;
+}
+
 function handleStartButton() {
   $('main').on('click', '#jsStartButton', function(e) {
     $('#jsStartQuiz').remove();
+    // renderBackground();
     renderQuizPage(renderQuestionAnswerSection());
   })
 }
@@ -19,7 +28,7 @@ function handleSubmitButton() {
 
 function checkAnswerRenderResults(selection, answer) {
   if (answer === selection) {
-    score++;
+    incrementScore();
     renderQuizPage(renderCorrectSection());
   } else {
     renderQuizPage(renderWrongSection());
@@ -31,7 +40,7 @@ function handleNextButton() {
   $('main').on('click', '#jsNextButton', function(e) {
     e.preventDefault();
     if (questionNum < questions.length) {
-      questionNum++;
+      incrementQuestionNum();
       renderQuizPage(renderQuestionAnswerSection());
     } else {
       renderFinalResultsPage();

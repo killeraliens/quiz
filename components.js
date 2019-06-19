@@ -6,6 +6,14 @@ function renderFinalResultsPage() {
   $('main').html(renderFinalResultsSection());
 }
 
+function renderBackground() {
+  // $('#baseGradient').removeClass('blue-base').addClass('no-opacity');
+  // $('body').removeClass('blue-bg').addClass('red-bg');
+  // $('body').animate({
+  //   background-color: "red"
+  // }, 5000);
+}
+
 function renderBannerHeader() {
   return `
     <div class="banner">
@@ -41,8 +49,8 @@ function renderQuestionAnswerSection() {
             <input type="radio" id="radio4" name="option" value="${questionObject.options.d}" required>
             <span>${questionObject.options.d}</span>
           </label>
-          <button id="jsSubmitButton" type="button">Submit</button>
         </fieldset>
+        <button id="jsSubmitButton" type="button">Submit</button>
       </form>
     </section>
   `;
