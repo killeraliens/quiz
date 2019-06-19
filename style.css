@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+
 html {
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 body * {
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Crimson Text', serif; */
+   /* font-family: 'Creepster', serif; */
+  font-family: 'Poppins', sans-serif;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -24,7 +30,10 @@ main, header {
 }
 
 h1 {
-  font-family: 'Patua One', serif;
+  /* font-family: 'Patua One', serif; */
+  /* font-family: 'Crimson Text', serif; */
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
@@ -50,6 +59,7 @@ button:focus {
 
 label span {
   transition: all .3s ease;
+  font-size: 14px;
 }
 
 label span:hover {
@@ -72,7 +82,7 @@ label span:hover {
   background-color: rgba(255, 255, 255, .3);
   padding: 20px;
   border-radius: 10px;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0px auto;
   margin-top: 40px;
 }
@@ -80,6 +90,8 @@ label span:hover {
 p {
   margin-bottom: 10px;
   /* font-family: 'Patua One', serif; */
+  line-height: 18px;
+  font-size: 14px;
 }
 
 fieldset {
@@ -118,6 +130,7 @@ input {
   border: 6px solid white;
   border-bottom: 16px solid white;
   box-shadow: 0px 0px 4px rgba(19, 19, 19, 0.1);
+
 }
 
 .banner {
@@ -128,6 +141,7 @@ input {
 
 #logo {
   font-size: 20px;
+  line-height: 26px;
 }
 
 .hidden {
@@ -178,36 +192,36 @@ input {
   background: linear-gradient(270deg, #521b49, #8d1031, #8a176a, #b03301);
   background-size: 800% 800%;
 
-  -webkit-animation: murkyMovement 10s ease infinite;
-  -moz-animation: murkyMovement 10s ease infinite;
-  animation: murkyMovement 10s ease infinite;
+  -webkit-animation: murkyMovement 20s ease infinite;
+  -moz-animation: murkyMovement 20s ease infinite;
+  animation: murkyMovement 20s ease infinite;
 }
 
 .murky-green-bg {
   background: linear-gradient(270deg, #13604c, #449857, #04723f, #009d22);
   background-size: 800% 800%;
 
-  -webkit-animation: murkyMovement 10s ease infinite;
-  -moz-animation: murkyMovement 10s ease infinite;
-  animation: murkyMovement 10s ease infinite;
+  -webkit-animation: murkyMovement 20s ease infinite;
+  -moz-animation: murkyMovement 20s ease infinite;
+  animation: murkyMovement 20s ease infinite;
 }
 
 .murky-brown-bg {
   background: linear-gradient(270deg, #603d13, #8d5d15, #4b3700, #857702);
   background-size: 800% 800%;
 
-  -webkit-animation: murkyMovement 10s ease infinite;
-  -moz-animation: murkyMovement 10s ease infinite;
-  animation: murkyMovement 10s ease infinite;
+  -webkit-animation: murkyMovement 20s ease infinite;
+  -moz-animation: murkyMovement 20s ease infinite;
+  animation: murkyMovement 20s ease infinite;
 }
 
 .murky-ltblue-bg {
   background: linear-gradient(270deg, #156d96, #009db1, #0f68a4, #0a91a9);
   background-size: 800% 800%;
 
-  -webkit-animation: murkyMovement 10s ease infinite;
-  -moz-animation: murkyMovement 10s ease infinite;
-  animation: murkyMovement 10s ease infinite;
+  -webkit-animation: murkyMovement 20s ease infinite;
+  -moz-animation: murkyMovement 20s ease infinite;
+  animation: murkyMovement 20s ease infinite;
 }
 
 @-webkit-keyframes murkyMovement {
@@ -233,21 +247,23 @@ input {
 
 @media screen and (max-width: 400px) {
   .container {
-    margin-top: 10px;
+    margin-top: 0px;
   }
 
   #jsIncorrectFeedback .image {
     float: left;
     margin-right: 10px;
-    height: 110px;
+    height: 118px;
     width: 110px;
     margin-bottom: 0px;
-    border: 4px solid white;
-    border-bottom: 8px solid white;
+    border: 5px solid white;
+    border-bottom: 14px solid white;
     box-shadow: 0px 0px 4px rgba(19, 19, 19, 0.1);
   }
 
-  .feedback > .text-left {
+  .text-left {
     text-align: left;
   }
+
+
 }

@@ -105,8 +105,7 @@ function renderWrongSection() {
             alt="${questionObject.correct.name}">
           </div>
           <p class="text-left">${questionObject.question}</p>
-        </div>
-
+      </div>
       <button id="jsNextButton" type="button">${determineNextButtonText()}</button>
     </section>
   `;
@@ -122,8 +121,8 @@ function determineNextButtonText() {
 function renderFinalResultsSection() {
   return `
     <section id="jsResultsPage" class="intro-results-container">
-      <h1>Final Score: ${score}</h1>
-      <p>Cryptozoologist Status:<br>${determineStatus()}</p>
+      <h1>Final Score: <br>${score}/${questions.length}</h1>
+      <p>Cryptozoologist Status<br><strong>${determineStatus()}</strong></p>
       <div class='button-wrap'>
         <button type='button' id='jsRestartButton'>Take it again!</button>
       </div>
@@ -133,9 +132,9 @@ function renderFinalResultsSection() {
 
 function determineStatus() {
   if (score >= questions.length * .8) {
-    return `master`;
+    return `Master`;
   } else if (score >= questions.length * .5) {
-    return `journeyman`;
+    return `Journeyman`;
   }
-  return `neophyte`;
+  return `Neophyte`;
 }
