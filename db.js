@@ -26,7 +26,7 @@ const questions = [
       name: `Wendigo`,
       imgUrl: `https://www.legendsofamerica.com/wp-content/uploads/2017/10/Wendigo1.jpg`,
       says: `You look delicious.`,
-      environment: `Night`
+      environment: `Death`
     }
   },
   {
@@ -46,7 +46,7 @@ const questions = [
       name: `Ebu Gogo`,
       imgUrl: `https://i.ytimg.com/vi/aV7RuvzMiEA/maxresdefault.jpg`,
       says: `Will you teach me how to cook?`,
-      environment: 'Airborn'
+      environment: 'Swamp'
     }
   },
 

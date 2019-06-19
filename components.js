@@ -6,31 +6,27 @@ function renderFinalResultsPage() {
   $('main').html(renderFinalResultsSection());
 }
 
-function renderBackground() {
-  // $('#baseGradient').removeClass('blue-base').addClass('no-opacity');
-  // $('body').removeClass('murky-blue-bg').addClass('murky-red-bg');
-  // console.log(questions[questionNum -1].correct.environment);
+function renderBackgroundGradient() {
   const currEnvironment = questions[questionNum - 1].correct.environment;
   const currBgColorClass = determineBgColor(currEnvironment);
-  console.log(currBgColorClass);
-  $('#layerGradient1').removeClass('no-opacity').addClass(currBgColorClass);
-}
+  const otherLayers = $(`#gradientBgs`).find("div").not(`#layerGradient${currEnvironment}`);
 
-function renderBackground2() {
-  const currEnvironment = questions[questionNum - 1].correct.environment;
-  const currBgColorClass = determineBgColor(currEnvironment);
-  console.log(currBgColorClass);
-  $('#layerGradient1').removeClass(currBgColorClass).addClass('no-opacity');
-  $('#layerGradient2').removeClass('no-opacity').addClass(currBgColorClass);
+  $(otherLayers).addClass('no-opacity');
+  $(`#layerGradient${currEnvironment}`).removeClass('no-opacity').addClass(currBgColorClass);
+  if ($('#jsNextButton').text() === 'See My Results') {
+    $(`#gradientBgs`).addClass(`no-opacity`);
+  }
 }
 
 function determineBgColor(environment) {
   if (environment === 'Mars') {
     return `murky-red-bg`;
-  } else if (environment === 'Night') {
-    return `no-opacity`;
-  } else if (environment === 'Airborn') {
+  } else if (environment === 'Swamp') {
     return `murky-green-bg`;
+  } else if (environment === 'Airborn') {
+    return `murky-ltblue-bg`;
+  } else if (environment === 'Death') {
+    return `murky-brown-bg`;
   }
   return `no-opacity`;
 }

@@ -29,7 +29,7 @@ function randomNum(min, max) {
 function handleStartButton() {
   $('main').on('click', '#jsStartButton', function(e) {
     $('#jsStartQuiz').remove();
-    renderBackground();
+    renderBackgroundGradient();
     renderQuizPage(renderQuestionAnswerSection());
   })
 }
@@ -58,9 +58,10 @@ function handleNextButton() {
     e.preventDefault();
     if (questionNum < questions.length) {
       incrementQuestionNum();
-      renderBackground2();
+      renderBackgroundGradient();
       renderQuizPage(renderQuestionAnswerSection());
     } else {
+      renderBackgroundGradient();
       renderFinalResultsPage();
     }
   });
