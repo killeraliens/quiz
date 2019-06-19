@@ -88,8 +88,6 @@ function renderCorrectSection() {
           alt="${questionObject.correct.name}">
         </div>
         <p>${questionObject.correct.name} says: <br>${questionObject.correct.says}</p>
-        <p>Environment: <br>${questionObject.correct.environment}</p>
-
       </div>
       <button id="jsNextButton" type="button">${determineNextButtonText()}</button>
     </section>
@@ -101,12 +99,14 @@ function renderWrongSection() {
   return `
     <section id="jsIncorrectFeedback" class="container">
       <div class="feedback">
-        <h1>Nope, but nice try!</h1>
-        <p>The correct answer is <br>${questionObject.correct.name}</p>
-        <img class="image"
-          src="${questionObject.correct.imgUrl}"
-          alt="${questionObject.correct.name}"></img>
-      </div>
+        <h1>Nope, study up!</h1>
+        <p>The correct answer is <br><strong>${questionObject.correct.name}</strong></p>
+          <div class="image" style="background-image: url('${questionObject.correct.imgUrl}');"
+            alt="${questionObject.correct.name}">
+          </div>
+          <p class="text-left">${questionObject.question}</p>
+        </div>
+
       <button id="jsNextButton" type="button">${determineNextButtonText()}</button>
     </section>
   `;
