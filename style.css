@@ -7,6 +7,7 @@ body * {
   font-family: 'Roboto', sans-serif;
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 body {
@@ -37,14 +38,24 @@ button {
   background: none;
   color: white;
   border: 1px solid white;
+  transition: all .3s ease;
 }
 
 button:hover {
-  background: rgba(0,0,0,.05);
+  /* background: rgba(255, 255, 255, 0.1); */
+  opacity: .6;
 }
 
 button:focus {
   outline: none;
+}
+
+label span {
+  transition: all .3s ease;
+}
+
+label span:hover {
+  opacity: .6;
 }
 
 .intro-results-container {
@@ -112,13 +123,31 @@ input {
   display: none;
 }
 
-#baseGradient {
+#layerStars {
+  position: absolute;
+}
+
+.star {
+  position: absolute;
+  background: radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, 0));
+  border-radius: 50%;
+  padding: 2px;
+}
+
+#baseGradient, #layerGradient {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
+  -webkit-transition: 30s ease;
+  -moz-transition: 30s ease;
+  transition: 1s ease;
+}
+
+.no-opacity {
+  opacity: 0;
 }
 
 /* .red-bg {
@@ -148,6 +177,15 @@ input {
   animation: murkyMovement 30s ease infinite;
 }
 
+.murky-red-bg {
+  background: linear-gradient(270deg, #521b49, #8d1031, #8a176a, #b03301);
+  background-size: 800% 800%;
+
+  -webkit-animation: murkyMovement 30s ease infinite;
+  -moz-animation: murkyMovement 30s ease infinite;
+  animation: murkyMovement 30s ease infinite;
+}
+
 @-webkit-keyframes murkyMovement {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
@@ -167,4 +205,10 @@ input {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    margin-top: 10px;
+  }
 }

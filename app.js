@@ -12,7 +12,7 @@ function incrementQuestionNum() {
 function handleStartButton() {
   $('main').on('click', '#jsStartButton', function(e) {
     $('#jsStartQuiz').remove();
-    // renderBackground();
+    renderBackground();
     renderQuizPage(renderQuestionAnswerSection());
   })
 }
@@ -55,7 +55,26 @@ function handleRestartButton() {
   });
 }
 
+function renderStars() {
+  const starCount = 20;
+  const starArr = [];
+  for (let i = 1; i <= starCount; i++) {
+    const size = randomNum(8, 13) + `px`;
+    const positionTop = randomNum(10, 300) + `px`;
+    const positionLeft = randomNum(10, $(window).width() - 10) + `px`;
+    const singleStar = `<div class="star" style="width:${size}; height:${size}; top:${positionTop}; left:${positionLeft};"></div>`;
+    starArr.push(singleStar);
+  }
+
+  $('#layerStars').html(starArr.join('\n'))
+}
+
+function randomNum(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
 function handleButtons() {
+  renderStars();
   handleStartButton();
   handleSubmitButton();
   handleNextButton();

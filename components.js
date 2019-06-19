@@ -6,13 +6,11 @@ function renderFinalResultsPage() {
   $('main').html(renderFinalResultsSection());
 }
 
-// function renderBackground() {
-//   // $('#baseGradient').removeClass('blue-base').addClass('no-opacity');
-//   // $('body').removeClass('blue-bg').addClass('red-bg');
-//   // $('body').animate({
-//   //   background-color: "red"
-//   // }, 5000);
-// }
+function renderBackground() {
+  // $('#baseGradient').removeClass('blue-base').addClass('no-opacity');
+  // $('body').removeClass('murky-blue-bg').addClass('murky-red-bg');
+  $('#layerGradient').removeClass('no-opacity').addClass('murky-red-bg');
+}
 
 function renderBannerHeader() {
   return `
