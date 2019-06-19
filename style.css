@@ -11,8 +11,6 @@ body * {
 }
 
 body {
-  /* background: linear-gradient(rgb(46, 46, 154), rgb(14, 12, 58)); */
-  /* background-color: blue; */
   color: white;
   margin: 0px;
 }
@@ -63,7 +61,7 @@ label span:hover {
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  height: 90vh;
+  height: 100vh;
 }
 
 .intro-results-container * {
@@ -105,6 +103,7 @@ input {
   height: 200px;
   width: 200px;
   background-size: cover;
+  background-position: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;

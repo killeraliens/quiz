@@ -13,8 +13,12 @@ function renderBackgroundGradient() {
 
   $(otherLayers).addClass('no-opacity');
   $(`#layerGradient${currEnvironment}`).removeClass('no-opacity').addClass(currBgColorClass);
+  if (questionNum === 1) {
+    $(`#baseGradient`).addClass(`no-opacity`);
+  }
   if ($('#jsNextButton').text() === 'See My Results') {
     $(`#gradientBgs`).addClass(`no-opacity`);
+    $(`#baseGradient`).removeClass(`no-opacity`);
   }
 }
 
@@ -36,7 +40,7 @@ function renderBannerHeader() {
     <div class="banner">
       <h1 id="logo">Cryptids<br>Quiz</h1>
       <div class="count-score">
-        <p>Question: <span id="questionNum">${questionNum}</span>/10</p>
+        <p>Question: <span id="questionNum">${questionNum}</span>/${questions.length}</p>
         <p>Score: <span id="scoreCount">${score}</span></p>
       </div>
     </div>
@@ -80,10 +84,12 @@ function renderCorrectSection() {
     <section id="jsCorrectFeedback" class="container">
       <div class="feedback">
         <h1>You got it right!</h1>
-        <img class="image" src="${questionObject.correct.imgUrl}"
+        <div class="image" style="background-image: url('${questionObject.correct.imgUrl}');"
           alt="${questionObject.correct.name}">
-        </img>
+        </div>
         <p>${questionObject.correct.name} says: <br>${questionObject.correct.says}</p>
+        <p>Environment: <br>${questionObject.correct.environment}</p>
+
       </div>
       <button id="jsNextButton" type="button">${determineNextButtonText()}</button>
     </section>
