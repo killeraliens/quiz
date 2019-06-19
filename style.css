@@ -10,12 +10,10 @@ body * {
 }
 
 body {
-  background: linear-gradient(rgb(46, 46, 154), rgb(14, 12, 58));
+  /* background: linear-gradient(rgb(46, 46, 154), rgb(14, 12, 58)); */
   /* background-color: blue; */
   color: white;
   margin: 0px;
-  /* -webkit-transition: background-position 2s ease-out;
-  transition: background-position 2s ease-out; */
 }
 
 main {
@@ -119,18 +117,8 @@ input {
   bottom: 0;
   left: 0;
   width: 100%;
-  /* height: 0; */
-  z-index: -1;
-  -webkit-transition: height 2s ease;
-  transition: height 2s ease;
-}
-
-.height-100 {
   height: 100%;
-}
-
-.height-0 {
-  height: 0;
+  z-index: -1;
 }
 
 /* .red-bg {
@@ -138,26 +126,45 @@ input {
   background: linear-gradient(rgb(250, 75, 0), rgb(133, 1, 118));
 }
 
-
-
 .blue-bg {
   background-color:  rgb(46, 46, 154);
   background: linear-gradient(rgb(46, 46, 154), rgb(14, 12, 58));
 } */
 
-.no-opacity {
-  opacity: 0;
-}
-
-/* .green-bg {
-  background-color:  rgb(64, 157, 38);
-}*/
-
-/* .blue-base {
+.blue-base {
   background: linear-gradient(rgba(46, 46, 154, .0), rgb(14, 12, 58));
 }
 
-.red-base {
+/* .red-base {
   background: linear-gradient(rgb(250, 75, .0), rgb(133, 1, 118));
 } */
 
+.murky-blue-bg {
+  background: linear-gradient(270deg, #1b1b52, #192c79, #3e2dab, #03315c);
+  background-size: 800% 800%;
+
+  -webkit-animation: murkyMovement 30s ease infinite;
+  -moz-animation: murkyMovement 30s ease infinite;
+  animation: murkyMovement 30s ease infinite;
+}
+
+@-webkit-keyframes murkyMovement {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes murkyMovement {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes murkyMovement {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes murkyMovement {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
