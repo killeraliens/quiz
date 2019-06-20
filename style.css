@@ -1,18 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
 
 html {
-  /* height: 100vh; */
+  height: 100vh;
 }
 
 body * {
   text-align: center;
-  /* font-family: 'Roboto', sans-serif; */
-  /* font-family: 'Crimson Text', serif; */
-   /* font-family: 'Creepster', serif; */
   font-family: 'Poppins', sans-serif;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  text-shadow: 0px 0px 4px rgba(19, 19, 19, 0.2);
 }
 
 body {
@@ -149,6 +147,7 @@ input {
 
 #layerStars {
   position: absolute;
+  z-index: 1;
 }
 
 .star {

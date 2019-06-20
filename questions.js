@@ -55,7 +55,7 @@ const questions = [
     correct: {
       name: `Buru`,
       imgUrl: `https://i.pinimg.com/originals/48/b7/76/48b7769a34723707560d0e68c8d5f918.jpg`,
-      says: `I'm busy getting a tan.`,
+      says: `Come closer and pet me.`,
       environment: `Swamp`
     }
   },
@@ -95,7 +95,7 @@ const questions = [
     correct: {
       name: `Grootslang`,
       imgUrl: `http://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555921899/shape/mentalfloss/1280px-grootslang.jpg`,
-      says: `Get off my cave, you rascal!`,
+      says: `Leave me, humans.`,
       environment: `Death`
     }
   }
