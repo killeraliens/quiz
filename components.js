@@ -52,13 +52,13 @@ function determineBgColor(environment) {
 
 function renderBannerHeader() {
   return `
-    <div class="banner">
-      <h1 id="logo">Cryptids<br>Quiz</h1>
-      <div class="count-score">
-        <p>Question: <span id="questionNum">${questionNum}</span>/${questions.length}</p>
-        <p>Score: <span id="scoreCount">${score}</span></p>
+    <header role="banner" class="banner">
+      <p role="logo" aria-label="logo" id="logo">Cryptids<br>Quiz</p>
+      <div role="quiz progress" aria-label="quiz progress" class="count-score">
+        <p role="questionnumber">Question: <span id="questionNum">${questionNum}</span>/${questions.length}</p>
+        <p role="scorecount">Score: <span id="scoreCount">${score}</span></p>
       </div>
-    </div>
+    </header>
   `;
 }
 
@@ -96,11 +96,11 @@ function renderQuestionAnswerSection() {
 function renderCorrectSection() {
   const questionObject = questions[questionNum - 1];
   return `
-    <section id="jsCorrectFeedback" class="container">
+    <section role="feedback" id="jsCorrectFeedback" class="container">
       <div class="feedback">
         <h1>You got it right!</h1>
-        <div class="image" style="background-image: url('${questionObject.correct.imgUrl}');"
-          alt="${questionObject.correct.name}">
+        <div role="image" class="image" style="background-image: url('${questionObject.correct.imgUrl}');"
+          aria-label="${questionObject.correct.name}">
         </div>
         <p>${questionObject.correct.name} says: <br>${questionObject.correct.says}</p>
       </div>
@@ -112,12 +112,12 @@ function renderCorrectSection() {
 function renderWrongSection() {
   const questionObject = questions[questionNum - 1];
   return `
-    <section id="jsIncorrectFeedback" class="container">
+    <section role="feedback" id="jsIncorrectFeedback" class="container">
       <div class="feedback">
         <h1>Nope, study up!</h1>
         <p>The correct answer is <br><strong>${questionObject.correct.name}</strong></p>
-          <div class="image" style="background-image: url('${questionObject.correct.imgUrl}');"
-            alt="${questionObject.correct.name}">
+          <div role="image" class="image" style="background-image: url('${questionObject.correct.imgUrl}');"
+            aria-label="${questionObject.correct.name}">
           </div>
           <p class="text-left">${questionObject.question}</p>
       </div>
@@ -135,7 +135,7 @@ function determineNextButtonText() {
 
 function renderFinalResultsSection() {
   return `
-    <section id="jsResultsPage" class="intro-results-container">
+    <section role="quizresults" id="jsResultsPage" class="intro-results-container">
       <h1>Final Score: <br>${score}/${questions.length}</h1>
       <p>Cryptozoologist Status<br><strong>${determineStatus()}</strong></p>
       <div class='button-wrap'>
@@ -156,7 +156,7 @@ function determineStatus() {
 
 function renderStartSection() {
   return `
-    <section id="jsStartQuiz" class="intro-results-container">
+    <section role="quizstart" id="jsStartQuiz" class="intro-results-container">
       <h1>Cryptids Quiz</h1>
       <p>How well do you know your folklore creatures?</p>
       <div class='button-wrap'>
