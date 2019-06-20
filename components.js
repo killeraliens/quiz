@@ -1,3 +1,4 @@
+
 function renderQuizPage(section) {
   $('main').html(renderBannerHeader() + '\n' + section);
 }
