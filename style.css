@@ -17,6 +17,7 @@ body {
   color: white;
   margin: 0px;
   height: 100%;
+  position: fixed;
 }
 
 main {
@@ -280,6 +281,10 @@ input {
 
   header {
     margin-bottom: 10px;
+  }
+
+  body {
+    padding-bottom: 10px;
   }
 
 }
