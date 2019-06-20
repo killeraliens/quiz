@@ -27,12 +27,14 @@ function determineBgColor(environment) {
     return `murky-red-bg`;
   } else if (environment === 'Swamp') {
     return `murky-green-bg`;
-  } else if (environment === 'Airborn') {
+  } else if (environment === 'Water') {
     return `murky-ltblue-bg`;
   } else if (environment === 'Death') {
-    return `murky-brown-bg`;
+    return `.murky-black-bg`;
+  } else if (environment === 'Earth') {
+    return `.murky-brown-bg`;
   }
-  return `no-opacity`;
+  // return `no-opacity`;
 }
 
 function renderBannerHeader() {
