@@ -48,6 +48,7 @@ button {
 
 button:hover {
   opacity: .6;
+  cursor: pointer;
 }
 
 button:focus {
@@ -59,8 +60,9 @@ label span {
   font-size: 14px;
 }
 
-label span:hover {
+label:hover  {
   opacity: .6;
+  cursor: pointer;
 }
 
 .intro-results-container {
@@ -84,7 +86,7 @@ label span:hover {
   margin-top: 40px;
 }
 
-p {
+p, legend {
   margin-bottom: 10px;
   /* font-family: 'Patua One', serif; */
   line-height: 18px;

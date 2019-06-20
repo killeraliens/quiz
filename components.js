@@ -66,8 +66,8 @@ function renderQuestionAnswerSection() {
   return `
     <section id="jsQuestionAnswerForm" class="container">
       <form >
-        <p id="question">${questionObject.question}<br>What am I?</p>
         <fieldset>
+          <legend id="question">${questionObject.question}<br>What am I?</legend>
           <label>
             <input type="radio" id="radio1" name="option" value="${questionObject.options.a}" required>
             <span>${questionObject.options.a}</span>
@@ -85,7 +85,7 @@ function renderQuestionAnswerSection() {
             <span>${questionObject.options.d}</span>
           </label>
         </fieldset>
-        <button id="jsSubmitButton" type="button">Submit</button>
+        <button id="jsSubmitButton" type="submit">Submit</button>
       </form>
     </section>
   `;

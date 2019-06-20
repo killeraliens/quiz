@@ -35,8 +35,10 @@ function handleStartButton() {
   $('main').on('click', '#jsStartButton', function(e) {
     $('#jsStartQuiz').remove();
     renderBackgroundGradient();
-    renderQuizPage(renderQuestionAnswerSection());
-  })
+    renderQuizPage(renderQuestionAnswerSection()); //THE FORM IS RENDERED HERE ALL RADIOS ARE REQUIRED
+    let x = document.getElementById("radio1").required;
+    console.log(x); //THIS IS LOGGING AS TRUE, BUT IS NOT AFFECTING MY ABILITY TO CLICK THROUGH FORMS
+  });
 }
 
 function handleSubmitButton() {
@@ -46,6 +48,7 @@ function handleSubmitButton() {
     const answerName = questions[questionNum - 1].correct.name;
     checkAnswerRenderResults(selectedName, answerName);
   });
+
 }
 
 function checkAnswerRenderResults(selection, answer) {
