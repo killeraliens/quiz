@@ -6,6 +6,10 @@ function renderFinalResultsPage() {
   $('main').html(renderFinalResultsSection());
 }
 
+function renderStartPage() {
+  $('main').html(renderStartSection());
+}
+
 function renderBackgroundGradient() {
   const currEnvironment = questions[questionNum - 1].correct.environment;
   const currBgColorClass = determineBgColor(currEnvironment);
@@ -22,6 +26,14 @@ function renderBackgroundGradient() {
   }
 }
 
+function resetBackgroundGradient() {
+  $(`#gradientBgs`).removeClass(`no-opacity`);
+  const gradientLayers = $(`#gradientBgs`).find("div");
+  for (let i = 0; i < gradientLayers.length; i++) {
+    $(gradientLayers[i]).addClass('no-opacity');
+  }
+}
+
 function determineBgColor(environment) {
   if (environment === 'Mars') {
     return `murky-red-bg`;
@@ -30,11 +42,11 @@ function determineBgColor(environment) {
   } else if (environment === 'Water') {
     return `murky-ltblue-bg`;
   } else if (environment === 'Death') {
-    return `.murky-black-bg`;
+    return `murky-black-bg`;
   } else if (environment === 'Earth') {
-    return `.murky-brown-bg`;
+    return `murky-brown-bg`;
   }
-  // return `no-opacity`;
+  return `no-opacity`;
 }
 
 function renderBannerHeader() {
@@ -139,4 +151,16 @@ function determineStatus() {
     return `Journeyman`;
   }
   return `Neophyte`;
+}
+
+function renderStartSection() {
+  return `
+    <section id="jsStartQuiz" class="intro-results-container">
+      <h1>Cryptids Quiz</h1>
+      <p>How well do you know your folklore creatures?</p>
+      <div class='button-wrap'>
+        <button type='button' id='jsStartButton' >Get Started!</button>
+      </div>
+    </section>
+  `;
 }

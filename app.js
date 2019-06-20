@@ -9,6 +9,11 @@ function incrementQuestionNum() {
   questionNum++;
 }
 
+function resetScoreAndQuestionNum() {
+  score = 0;
+  questionNum = 1;
+}
+
 function renderStars() {
   const starCount = 20;
   const starArr = [];
@@ -70,7 +75,9 @@ function handleNextButton() {
 
 function handleRestartButton() {
   $('main').on('click', '#jsRestartButton', function (e) {
-    location.reload();
+    resetScoreAndQuestionNum();
+    resetBackgroundGradient();
+    renderStartPage();
   });
 }
 
