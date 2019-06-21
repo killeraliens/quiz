@@ -16,7 +16,7 @@ body * {
 body {
   color: white;
   margin: 0px;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   /* position: absolute; */
 }
@@ -175,7 +175,7 @@ input {
   top:0;
   right: 0; */
   width: 100%;
-  min-height: 120%;
+  min-height: 140%;
   z-index: -2;
   -webkit-transition: 1s ease;
   -moz-transition: 1s ease;
