@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
 
 html {
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 body * {
@@ -16,7 +16,7 @@ body * {
 body {
   color: white;
   margin: 0px;
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   /* position: absolute; */
 }
@@ -173,7 +173,7 @@ input {
   bottom: 0;
   left: 0;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   z-index: -2;
   -webkit-transition: 1s ease;
   -moz-transition: 1s ease;
