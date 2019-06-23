@@ -36,7 +36,7 @@ function resizeBackgroundGradient() {
 }
 
 $(window).resize(resizeBackgroundGradient());
-// resizeBackgroundGradient();
+resizeBackgroundGradient();
 
 function resetBackgroundGradient() {
   $(`#gradientBgs`).removeClass(`no-opacity`);
