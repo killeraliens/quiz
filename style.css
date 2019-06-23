@@ -175,6 +175,7 @@ input {
   z-index: -2;
   -webkit-transition: 1s ease;
   -moz-transition: 1s ease;
+    transition: 1s ease;
   transition: height 999s;
 
 }
