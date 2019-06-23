@@ -29,17 +29,22 @@ function renderBackgroundGradient() {
   }
 }
 
-function resizeBackgroundGradient() {
-  // $('#gradientBgs').height($(window).height() + 100);
-  // $('#gradientBgs').find('div').height($(window).height() + 100);
-  $('section, #gradientBgs, #gradientBgs div').on('touchmove', function(e){
-    e.preventDefault();
-  }, false);
+// function resizeBackgroundGradient() {
+//   // $('#gradientBgs').height($(window).height());
+//   // $('#gradientBgs').find('div').height($(window).height());
 
-}
+//   // $('section, #gradientBgs, #gradientBgs div').on('touchmove', function(e){
+//   //   e.preventDefault();
+//   // }, false);
+//   $('#gradientBgs, #gradientBgs div').css({ "top": "0", "bottom": "0"});
 
-// $(window).resize(resizeBackgroundGradient);
-resizeBackgroundGradient();
+// }
+// window.addEventListener('scroll', function (event) {
+//   resizeBackgroundGradient()
+// });
+
+// // $(window).resize(resizeBackgroundGradient());
+// // resizeBackgroundGradient();
 
 function resetBackgroundGradient() {
   $(`#gradientBgs`).removeClass(`no-opacity`);
@@ -180,24 +185,3 @@ function renderStartSection() {
   `;
 }
 
-
-// $(function () {
-
-//   var $w = $(window),
-//     $background = $('#gradientBgs').find('div');
-
-//     // $('#gradientBgs').height($(window).height() + 100);
-
-
-//   // Fix background image jump on mobile
-//   if ((/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
-//     $background.css({ 'top': 'auto', 'bottom': 0 });
-
-//     $w.resize(sizeBackground);
-//     sizeBackground();
-//   }
-
-//   function sizeBackground() {
-//     $background.height(screen.height);
-//   }
-// });
