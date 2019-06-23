@@ -30,10 +30,12 @@ function renderBackgroundGradient() {
 }
 
 function resizeBackgroundGradient() {
-  $('#gradientBgs').find('div').height($(window).height() + 60);
   $('#gradientBgs').height($(window).height() + 60);
+  // $('#gradientBgs').find('div').height($(window).height() + 60);
 }
 
+$(window).resize(resizeBackgroundGradient());
+resizeBackgroundGradient();
 
 function resetBackgroundGradient() {
   $(`#gradientBgs`).removeClass(`no-opacity`);
