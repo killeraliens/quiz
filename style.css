@@ -10,8 +10,7 @@ body * {
 }
 
 body {
-  position: relative;
-  float: left;
+  /* position: relative; */
   color: white;
   margin: 0px;
   height: 100%;
@@ -275,7 +274,7 @@ input {
 @media screen and (max-width: 400px) {
   .container {
     margin-top: 0px;
-    margin-bottom: 160px;
+    margin-bottom: 20px;
     /* margin-bottom: 0px; */
   }
 
