@@ -171,11 +171,12 @@ input {
   /* top: auto; */
   /* right: 0; */
   width: 100%;
-  height: calc(100% + 100px);
+  height: 100%;
   z-index: -2;
   -webkit-transition: opacity 1s ease;
   -moz-transition: opacity 1s ease;
-  transition: opacity 1s ease;
+  transition: height 999s;
+
 }
 
 .no-opacity {
