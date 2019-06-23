@@ -10,16 +10,16 @@ body * {
 }
 
 body {
-  position: relative;
+  /* position: relative; */
   color: white;
   margin: 0px;
-  height: calc(100vh + 60px);
+  height: 100%;
   width: 100%;
   /* position: absolute; */
 }
 
 #baseGradient, #gradientBgs, #gradientBgs * {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   top: 0;
@@ -269,9 +269,14 @@ input {
     /* margin-bottom: 0px; */
   }
 
-  /* #gradientBgs, #gradientBgs * {
-    height: calc(100% + 80px)
-  } */
+  body {
+    position: relative;
+    height: calc(100vh + 80px);
+  }
+
+  #baseGradient, #gradientBgs, #gradientBgs * {
+    position: absolute;
+  }
 
   #jsIncorrectFeedback .image {
     float: left;
