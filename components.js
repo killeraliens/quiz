@@ -32,9 +32,10 @@ function renderBackgroundGradient() {
 function resizeBackgroundGradient() {
   // $('#gradientBgs').height($(window).height() + 100);
   // $('#gradientBgs').find('div').height($(window).height() + 100);
-  $('#gradientBgs, #gradientBgs div').addEventListener('touchmove', function(e){
+  $('section, #gradientBgs, #gradientBgs div').addEventListener('touchmove', function(e){
     e.preventDefault();
   }, false);
+
 }
 
 // $(window).resize(resizeBackgroundGradient);
