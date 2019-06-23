@@ -35,7 +35,7 @@ function resizeBackgroundGradient() {
 
 }
 
-// $(window).resize(resizeBackgroundGradient());
+// $(window).resize(resizeBackgroundGradient);
 // resizeBackgroundGradient();
 
 function resetBackgroundGradient() {
@@ -178,23 +178,23 @@ function renderStartSection() {
 }
 
 
-$(function () {
+// $(function () {
 
-  var $w = $(window),
-    $background = $('#gradientBgs').find('div');
+//   var $w = $(window),
+//     $background = $('#gradientBgs').find('div');
 
-    // $('#gradientBgs').height($(window).height() + 100);
+//     // $('#gradientBgs').height($(window).height() + 100);
 
 
-  // Fix background image jump on mobile
-  if ((/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
-    $background.css({ 'top': 'auto', 'bottom': 0 });
+//   // Fix background image jump on mobile
+//   if ((/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+//     $background.css({ 'top': 'auto', 'bottom': 0 });
 
-    $w.resize(sizeBackground);
-    sizeBackground();
-  }
+//     $w.resize(sizeBackground);
+//     sizeBackground();
+//   }
 
-  function sizeBackground() {
-    $background.height(screen.height);
-  }
-});
+//   function sizeBackground() {
+//     $background.height(screen.height);
+//   }
+// });
