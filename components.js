@@ -30,13 +30,13 @@ function renderBackgroundGradient() {
 }
 
 function resizeBackgroundGradient() {
-  $('#gradientBgs').height($(window).height() + 100);
-  $('#gradientBgs').find('div').height($(window).height() + 100);
+  // $('#gradientBgs').height($(window).height() + 100);
+  // $('#gradientBgs').find('div').height($(window).height() + 100);
 
 }
 
-$(window).resize(resizeBackgroundGradient());
-resizeBackgroundGradient();
+// $(window).resize(resizeBackgroundGradient());
+// resizeBackgroundGradient();
 
 function resetBackgroundGradient() {
   $(`#gradientBgs`).removeClass(`no-opacity`);
