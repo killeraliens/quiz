@@ -173,9 +173,9 @@ input {
   width: 100%;
   height: calc(100% + 100px);
   z-index: -2;
-  -webkit-transition: 1s ease;
-  -moz-transition: 1s ease;
-  transition: 1s ease;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  transition: opacity 1s ease;
 }
 
 .no-opacity {
