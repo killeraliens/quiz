@@ -1,4 +1,6 @@
 
+
+
 function renderQuizPage(section) {
   $('main').html(renderBannerHeader() + '\n' + section);
 }
@@ -25,6 +27,11 @@ function renderBackgroundGradient() {
     $(`#gradientBgs`).addClass(`no-opacity`);
     $(`#baseGradient`).removeClass(`no-opacity`);
   }
+  resizeBackgroundGradient();
+}
+
+function resizeBackgroundGradient() {
+  $('#gradientBgs').height($(window).height());
 }
 
 function resetBackgroundGradient() {

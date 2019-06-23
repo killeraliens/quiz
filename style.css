@@ -270,9 +270,9 @@ input {
     /* margin-bottom: 0px; */
   }
 
-  #gradientBgs, #gradientBgs * {
+  /* #gradientBgs, #gradientBgs * {
     height: calc(100% + 80px)
-  }
+  } */
 
   #jsIncorrectFeedback .image {
     float: left;
