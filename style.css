@@ -10,10 +10,10 @@ body * {
 }
 
 body {
-  /* position: relative; */
+  position: relative;
   color: white;
   margin: 0px;
-  height: 100vh;
+  height: calc(100vh + 60px);
   width: 100%;
   /* position: absolute; */
 }
@@ -25,27 +25,18 @@ body {
   top: 0;
   right: 0;
   width: 100%;
-  height: calc(100% + 100px);
+  height: 100%;
   z-index: -2;
   -webkit-transition: 1s ease;
   -moz-transition: 1s ease;
   transition: 1s ease;
 }
 
-/* .position {
-  bottom: 0;
-  left: 0;
-  top: 0;
-  right: 0;
-} */
-
 header {
   padding: 20px 10px 10px 10px;
 }
 
 main {
-  /* height: 100%; */
-  /* margin: 20px; */
   margin-left: 20px;
   margin-right: 20px;
 }
