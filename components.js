@@ -31,7 +31,7 @@ function renderBackgroundGradient() {
 
 function resizeBackgroundGradient() {
   $('#gradientBgs').height($(window).height() + 60);
-  // $('#gradientBgs').find('div').height($(window).height() + 60);
+  $('#gradientBgs').find('div').height($(window).height() + 60);
 }
 
 $(window).resize(resizeBackgroundGradient());
