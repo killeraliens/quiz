@@ -88,6 +88,7 @@ function handleButtons() {
   handleSubmitButton();
   handleNextButton();
   handleRestartButton();
+  resizeBackgroundGradient();
 }
 
 handleButtons();

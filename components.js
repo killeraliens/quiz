@@ -27,13 +27,13 @@ function renderBackgroundGradient() {
     $(`#gradientBgs`).addClass(`no-opacity`);
     $(`#baseGradient`).removeClass(`no-opacity`);
   }
-  resizeBackgroundGradient();
 }
 
 function resizeBackgroundGradient() {
   $('#gradientBgs').find('div').height($(window).height() + 60);
   $('#gradientBgs').height($(window).height() + 60);
 }
+
 
 function resetBackgroundGradient() {
   $(`#gradientBgs`).removeClass(`no-opacity`);
