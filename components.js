@@ -32,11 +32,14 @@ function renderBackgroundGradient() {
 function resizeBackgroundGradient() {
   // $('#gradientBgs').height($(window).height() + 100);
   // $('#gradientBgs').find('div').height($(window).height() + 100);
-
+  // const gradientDivs = $('#gradientBgs').find('div');
+  $('#gradientBgs').find('div').add('#gradientBgs').addEventListener('touchmove', function(e){
+    e.preventDefault();
+  }, false);
 }
 
 // $(window).resize(resizeBackgroundGradient);
-// resizeBackgroundGradient();
+resizeBackgroundGradient();
 
 function resetBackgroundGradient() {
   $(`#gradientBgs`).removeClass(`no-opacity`);
