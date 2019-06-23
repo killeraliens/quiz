@@ -35,7 +35,7 @@ function resizeBackgroundGradient() {
 
 }
 
-// $(window).resize(resizeBackgroundGradient());
+$(window).resize(resizeBackgroundGradient());
 // resizeBackgroundGradient();
 
 function resetBackgroundGradient() {
