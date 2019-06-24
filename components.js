@@ -29,22 +29,6 @@ function renderBackgroundGradient() {
   }
 }
 
-// function resizeBackgroundGradient() {
-//   // $('#gradientBgs').height($(window).height());
-//   // $('#gradientBgs').find('div').height($(window).height());
-
-//   // $('section, #gradientBgs, #gradientBgs div').on('touchmove', function(e){
-//   //   e.preventDefault();
-//   // }, false);
-//   $('#gradientBgs, #gradientBgs div').css({ "top": "0", "bottom": "0"});
-
-// }
-// window.addEventListener('scroll', function (event) {
-//   resizeBackgroundGradient()
-// });
-
-// // $(window).resize(resizeBackgroundGradient());
-// // resizeBackgroundGradient();
 
 function resetBackgroundGradient() {
   $(`#gradientBgs`).removeClass(`no-opacity`);

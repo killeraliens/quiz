@@ -19,7 +19,7 @@ function renderStars() {
   const starArr = [];
   for (let i = 1; i <= starCount; i++) {
     const size = randomNum(8, 13) + `px`;
-    const positionTop = randomNum(10, 300) + `px`;
+    const positionTop = randomNum(10, $(window).height() * .5) + `px`;
     const positionLeft = randomNum(10, $(window).width() - 10) + `px`;
     const singleStar = `<div class="star" style="width:${size}; height:${size}; top:${positionTop}; left:${positionLeft};"></div>`;
     starArr.push(singleStar);
