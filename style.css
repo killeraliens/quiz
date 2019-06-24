@@ -15,10 +15,9 @@ body {
   margin: 0px;
   height: 100%;
   width: 100%;
-  /* position: absolute; */
 }
 
-#baseGradient, #gradientBgs, #gradientBgs * {
+#baseGradient, #layerStars, #gradientBgs, #gradientBgs * {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -166,7 +165,7 @@ input {
 }
 
 #layerStars {
-  position: absolute;
+  /* position: absolute; */
   z-index: -1;
 }
 
@@ -274,7 +273,7 @@ input {
     height: calc(100vh + 80px);
   }
 
-  #baseGradient, #gradientBgs, #gradientBgs * {
+  #baseGradient, #layerStars, #gradientBgs, #gradientBgs * {
     position: absolute;
   }
 
