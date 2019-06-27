@@ -55,11 +55,11 @@ function determineBgColor(environment) {
 
 function renderBannerHeader() {
   return `
-    <header role="banner" class="banner">
-      <p role="logo" aria-label="logo" id="logo">Cryptids<br>Quiz</p>
-      <div role="quiz progress" aria-label="quiz progress" class="count-score">
-        <p role="questionnumber">Question: <span id="questionNum">${questionNum}</span>/${questions.length}</p>
-        <p role="scorecount">Score: <span id="scoreCount">${score}</span></p>
+    <header class="banner">
+      <p aria-label="logo" id="logo">Cryptids<br>Quiz</p>
+      <div aria-label="quiz progress" class="count-score">
+        <p>Question: <span id="questionNum">${questionNum}</span>/${questions.length}</p>
+        <p>Score: <span id="scoreCount">${score}</span></p>
       </div>
     </header>
   `;
