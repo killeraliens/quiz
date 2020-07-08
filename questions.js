@@ -4,7 +4,7 @@ const questions = [
     options: { a: `Jersey Devil`, b: `Yowie`, c: `Mongolian Death Worm`, d: `Kongamato` },
     correct: {
       name: `Mongolian Death Worm`,
-      imgUrl: `https://natgeo.imgix.net/factsheets/thumbnails/Facts_MongolianDeathWorm_deathworm%20(1).tif?auto=compress,format&w=1024&h=560&fit=crop`,
+      imgUrl: `https://amhsnewspaper.com/wp-content/uploads/2017/11/Mongolian-Death-Worm.jpg`,
       says: `Sunflowers are my favorite flower`,
       environment: `Mars`
     }
